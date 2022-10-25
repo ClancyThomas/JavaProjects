@@ -7,22 +7,22 @@ public class Accounts {
     private ArrayList<Account> accounts = new ArrayList<>();
 
     public Accounts(int numOfAccounts, double startingBalance) {
-        this.maxAccounts = numOfAccounts - 1;
+        this.maxAccounts = numOfAccounts-1;
 
-        for (int i=0; i<numOfAccounts-1; i++) {
+        for (int i=0; i<numOfAccounts; i++) {
             Account temp = new Account(startingBalance);
             accounts.add(temp);
         }
     }
 
     public Account getRandomAccount() {
-        int randomNum = ThreadLocalRandom.current().nextInt(0, maxAccounts);
+        int randomNum = ThreadLocalRandom.current().nextInt(0, maxAccounts+1);
         return accounts.get(randomNum);
     }
 
     public void printAllAccounts() {
-        for(int i=0; i<maxAccounts-1; i++) {
-            System.out.println(i+". "+accounts.get(i));
+        for(int i=0; i<=maxAccounts; i++) {
+            System.out.printf("%d. "+accounts.get(i), i+1);
         }
     }
 
