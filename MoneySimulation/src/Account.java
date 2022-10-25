@@ -2,8 +2,8 @@ public class Account {
 
     private double balance;
 
-    public Account() {
-        balance = 0.00;
+    public Account(double startingBalance) {
+        this.balance = startingBalance;
     }
 
     public double getBalance() {

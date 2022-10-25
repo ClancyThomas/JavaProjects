@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Accounts {
@@ -7,11 +6,11 @@ public class Accounts {
     private int maxAccounts;
     private ArrayList<Account> accounts = new ArrayList<>();
 
-    public Accounts(int numOfAccounts) {
+    public Accounts(int numOfAccounts, double startingBalance) {
         this.maxAccounts = numOfAccounts - 1;
 
         for (int i=0; i<numOfAccounts-1; i++) {
-            Account temp = new Account();
+            Account temp = new Account(startingBalance);
             accounts.add(temp);
         }
     }
@@ -19,6 +18,12 @@ public class Accounts {
     public Account getRandomAccount() {
         int randomNum = ThreadLocalRandom.current().nextInt(0, maxAccounts);
         return accounts.get(randomNum);
+    }
+
+    public void printAllAccounts() {
+        for(int i=0; i<maxAccounts-1; i++) {
+            System.out.println(i+". "+accounts.get(i));
+        }
     }
 
 }
