@@ -10,12 +10,10 @@ public class Account {
         return balance;
     }
 
-    public boolean withdraw(double amount) {
+    public void withdraw(double amount) {
         if (balance >= amount) {
             balance -= amount;
-            return true;
         }
-        return false;
     }
 
     public void deposit(double amount) {
@@ -24,7 +22,7 @@ public class Account {
 
     @Override
     public String toString() {
-        return "$"+balance;
+        return String.format("$%.2f %n",balance);
     }
     
 }

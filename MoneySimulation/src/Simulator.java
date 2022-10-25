@@ -37,9 +37,9 @@ public class Simulator {
 
     private double getExchangeAmount(Account one, Account two) {
         if (one.getBalance() >= two.getBalance()) {
-            return ThreadLocalRandom.current().nextDouble(0,one.getBalance());
-        } else {
             return ThreadLocalRandom.current().nextDouble(0,two.getBalance());
+        } else {
+            return ThreadLocalRandom.current().nextDouble(0,one.getBalance());
         }
     }
 
