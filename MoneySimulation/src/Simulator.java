@@ -10,12 +10,18 @@ public class Simulator {
         this.exchanges = exchanges;
     }
 
-    public void startSimulation() {
+    public void startSimulationWithConsole() {
         System.out.println("************ Pre-simulation Report ************");
-        accounts.printAllAccounts();
+        accounts.printAllAccountsToConsole();
         this.exchangeMoney();
         System.out.println("************ Post-simulation Report ************");
-        accounts.printAllAccounts();
+        accounts.printAllAccountsToConsole();
+    }
+
+    public void startSimulationWithTextFile() {
+        accounts.printAllAccountsToTextFile("************ Pre-simulation Report ************", false);
+        this.exchangeMoney();
+        accounts.printAllAccountsToTextFile("************ Post-simulation Report ************", true);
     }
 
     private void exchangeMoney() {
