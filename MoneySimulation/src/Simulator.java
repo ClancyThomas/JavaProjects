@@ -1,5 +1,8 @@
 import java.util.concurrent.ThreadLocalRandom;
 
+//
+// Class that represents the simulation
+//
 public class Simulator {
 
     private Accounts accounts;
@@ -24,6 +27,9 @@ public class Simulator {
         accounts.printAllAccountsToTextFile("************ Post-simulation Report ************", true);
     }
 
+    //
+    // Exchange money between random accounts
+    //
     private void exchangeMoney() {
         for (int i = 0; i < exchanges; i++) {
 
@@ -41,6 +47,9 @@ public class Simulator {
         }
     }
 
+    //
+    // Exchange amount will be a random amount that is less than the smallest balance of the two accounts
+    //
     private double getExchangeAmount(Account one, Account two) {
         if (one.getBalance() >= two.getBalance()) {
             return ThreadLocalRandom.current().nextDouble(0,two.getBalance());

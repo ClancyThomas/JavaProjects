@@ -2,9 +2,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
+//
+// Class that represents a list/group of bank accounts and contains ability to print the accounts
+//
 public class Accounts {
 
     private int maxAccounts;
@@ -13,12 +15,16 @@ public class Accounts {
     public Accounts(int numOfAccounts, double startingBalance) {
         this.maxAccounts = numOfAccounts-1;
 
+        // Add each account to the list of account
         for (int i=0; i<numOfAccounts; i++) {
             Account temp = new Account(startingBalance);
             accounts.add(temp);
         }
     }
 
+    //
+    // Select a random account from all the accounts
+    //
     public Account getRandomAccount() {
         int randomNum = ThreadLocalRandom.current().nextInt(0, maxAccounts+1);
         return accounts.get(randomNum);

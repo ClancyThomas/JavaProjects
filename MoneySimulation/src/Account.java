@@ -1,3 +1,6 @@
+//
+// Basic class that represents a bank account
+//
 public class Account {
 
     private double balance;
@@ -20,6 +23,9 @@ public class Account {
         balance += amount;
     }
 
+    //
+    // Override toString in order to easily print an account
+    //
     @Override
     public String toString() {
         return String.format("$%.2f %n",balance);
