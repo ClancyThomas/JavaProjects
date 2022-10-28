@@ -22,6 +22,10 @@ public class Accounts {
         }
     }
 
+    public int getMaxAccounts() {
+        return maxAccounts;
+    }
+
     //
     // Select a random account from all the accounts
     //
