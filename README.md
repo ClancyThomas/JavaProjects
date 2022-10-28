@@ -77,6 +77,6 @@
     <tr>
     <tr>
         <th>Link to Project
-        <td> https://github.com/ClancyThomas/JavaProjects/tree/main/GCD/src
+        <td> https://github.com/ClancyThomas/JavaProjects/tree/main/MathCalculator/src
     <tr>
 </table>
