@@ -49,15 +49,15 @@
 <table>
     <tr>
         <th>Project Name
-        <td>Greatest Common Denominator
+        <td>Math Calculator
     <tr>
     <tr>
         <th>Project Description
-        <td>Very simple program that is able to solve for the greatest common denominator of two numbers. It takes user input from the console for the two numbers.
+        <td>Program that is able handle different math operations such as greatest common denominator.
     <tr>
     <tr>
         <th>Project Purpose
-        <td>I wrote this program to better understand the logic behind finding a greatest common denominator.
+        <td>I wrote this program to better understand the logic behind various math functions. It is also a project to practice unit testing and different object-oriented programming concepts.
     <tr>
     <tr>
         <th>Development Environment
